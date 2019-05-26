@@ -1,3 +1,30 @@
 .main-bg{
     background-color: #f2629d;
 }
+
+.main-secondary-bg{
+    background-color: #ea3788;
+}
+
+.main-tritary-bg{
+    background-color: #962658;
+}
+
+.main-right-nav{
+    max-width: 150px;
+    top: 150px;
+    position: relative;
+    z-index: 99;
+    margin-right: 0;
+    margin-left:auto;
+
+}
+.main-right-content{
+    padding: 0.5em;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 5px;
+}
+
+.main-right-content img{
+    height: 30px;
+}

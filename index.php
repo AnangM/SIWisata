@@ -15,7 +15,8 @@
 
 <body>
   <!-- Navbar     -->
-  <nav class="navbar navbar-dark  main-bg">
+  <nav class="navbar navbar-expand-md navbar-dark  main-bg">
+
     <a class="navbar-brand" href="./">
       <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
       TravelKuy
@@ -24,27 +25,54 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">DESTINASI<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">PERTUNJUKAN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">PAKET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="#">EVENT</a>
         </li>
       </ul>
     </div>
-  </naV>
-
-<!-- CONTENT -->
-Hello World!
-
-
+  </nav>
+<div class="container-fluid">
+  <!-- Side Nav -->
+  <div class="main-right-nav text-white">
+    <!-- Customer Service -->
+    <div class="row main-bg main-right-content">
+      <div class="col-md-9">
+        Kontak Kami
+      </div>
+      <div class="col-md-3">
+        <img src="./images/icon/cs.svg">
+      </div>
+    </div>
+    <!-- Cara booking -->
+    <div class="row main-secondary-bg main-right-content">
+      <div class="col-md-9">
+          Booking Trip
+      </div>
+      <div class="col-md-3">
+        <img src="./images/icon/question.svg">
+      </div>
+    </div>
+    <!-- paket trip -->
+    <div class="row main-tritary-bg main-right-content">
+      <div class="col-md-9">
+        Paket Trip
+      </div>
+      <div class="col-md-3">
+        <img src="./images/icon/gift.svg">
+      </div>
+    </div>
+  </div>
+</div>  
   <!-- JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
