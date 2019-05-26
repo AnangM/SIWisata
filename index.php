@@ -13,18 +13,18 @@
 </head>
 <!-- Until This Line  IS A MUST -->
 
-<body>
+<body style="background:url(borobudurtample.jpg); background-repeat:no-repeat; background-size:100% 100%; height: 800px; background-attachment:fixed">
   <!-- Navbar     -->
-  <nav class="navbar navbar-dark  main-bg">
+  <nav class="navbar navbar-dark sticky-top main-bg">
     <a class="navbar-brand" href="./">
-      <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
-      TravelKuy
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
+    TravelKuy
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
@@ -40,8 +40,8 @@
       </ul>
     </div>
   </naV>
-
-<!-- CONTENT -->
+  
+  <!-- CONTENT -->
 Hello World!
 
 
