@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
 <div class="full-height main-bg-image">
   <!-- Navbar     -->
-  <nav class="navbar navbar-expand-md navbar-dark  main-bg">
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark  main-bg" style="margin-bottom:1em;">
 
     <a class="navbar-brand" href="./">
       <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
@@ -27,39 +27,51 @@
       </ul>
     </div>
   </nav>
-  <div class="container-fluid">
-    <!-- Side Nav -->
-    <div class="main-right-nav text-white">
-      <!-- Customer Service -->
-      <div class="row main-bg main-right-content">
-        <div class="col-md-9">
-          Kontak Kami
-        </div>
-        <div class="col-md-3">
-          <img src="./images/icon/cs.svg">
-        </div>
+  <!-- Side Nav -->
+  <div class="main-right-nav text-white">
+    <!-- Customer Service -->
+    <div class="row main-bg main-right-content">
+      <div class="col-md-9">
+        Kontak Kami
       </div>
-      <!-- Cara booking -->
-      <div class="row main-secondary-bg main-right-content">
-        <div class="col-md-9">
-          Booking Trip
-        </div>
-        <div class="col-md-3">
-          <img src="./images/icon/question.svg">
-        </div>
+      <div class="col-md-3">
+        <img src="./images/icon/cs.svg">
       </div>
-      <!-- paket trip -->
-      <div class="row main-tritary-bg main-right-content">
-        <div class="col-md-9">
-          Paket Trip
-        </div>
-        <div class="col-md-3">
-            <img src="./images/icon/gift.svg">
-          </div>
-        <!-- row -->
-      </div>
-      <!-- main right nav -->
     </div>
+    <!-- Cara booking -->
+    <div class="row main-secondary-bg main-right-content">
+      <div class="col-md-9">
+        Booking Trip
+      </div>
+      <div class="col-md-3">
+        <img src="./images/icon/question.svg">
+      </div>
+    </div>
+    <!-- paket trip -->
+    <div class="row main-tritary-bg main-right-content">
+      <div class="col-md-9">
+        Paket Trip
+      </div>
+      <div class="col-md-3">
+        <img src="./images/icon/gift.svg">
+      </div>
+      <!-- row -->
+    </div>
+    <!-- main right nav -->
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="text-center text-white">
+      <h1><i>Paling sering dikunjungi</i></h1>
+      <!-- text center -->
+    </div>
+    <div class="row">
+      <div class="col-md"></div>
+      <div class="col-md"></div>
+      <div class="col-md"></div>
+    </div>
+
     <!-- container-fluid -->
   </div>
   <!-- full height -->
