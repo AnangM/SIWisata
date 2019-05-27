@@ -2,7 +2,7 @@
   <nav class="navbar sticky-top navbar-expand-md navbar-dark  main-bg" style="margin-bottom:1em;">
 
     <a class="navbar-brand" href="/">
-      <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
+      <img height="30px" class="d-inline-block align-top" src="/images/icon/map.svg" alt="">
       TravelKuy
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
