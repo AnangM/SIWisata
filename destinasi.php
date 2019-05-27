@@ -2,8 +2,9 @@
 <?php require('navbar.php') ?>
 <div class="container">
     <?php require('connect.php');
-    $sql = "SELECT lokasi.id,lokasi.nama,foto.url FROM (SELECT * FROM wisata_lokasi LIMIT 3) lokasi LEFT JOIN (SELECT * FROM wisata_foto) foto ON lokasi.id= foto.id_lokasi ";
+    $sql = "SELECT wisata_lokasi.id,wisata_lokasi.nama,wisata_foto.url FROM wisata_lokasi INNER JOIN wisata_foto ON wisata_lokasi.id= wisata_foto.id_lokasi ";
     $result = $conn->query($sql);
+    $conn->close();
     ?>
     <div class="card-group">
         <?php
