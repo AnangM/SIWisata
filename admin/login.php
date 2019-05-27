@@ -11,6 +11,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/navbar.php';
                 <input type="text" name="uname" id="uname" class="form-control">
                 <label for="passwd">Password</label>
                 <input type="password" name="passwd" id="passwd" class="form-control">
+                <div class="text-right" style="margin-top:1em;">
+                    <button class="btn text-white main-bg" type="submit" >Login!</button>
+                </div>
             </form>
         </div>
     </div>
