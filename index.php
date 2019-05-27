@@ -66,7 +66,7 @@
       </div>
       <!-- row -->
     </div>
-    <div class="row" style="margin-top:3em;">
+    <div class="row" style="margin-top:4.8em;">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <form action="search.php" method="get">
@@ -77,10 +77,19 @@
             </div>
         </form>
       </div>
-
+    <div class="text-center text-white" style="margin-top:1.5em;">
+      <h3><i><b>Kenapa Memilih Kami?</b></i></h3>
+      <!-- text center -->
+    </div>
     </div>
     <!-- row -->
   </div>
+    <div class="text-center text-white" style="margin-top:1em;">
+      <h6>Kami menyediakan berbagai macam trip dan kami juga telah bekerja sama</h6>
+      <h6>dengan pengelola destinasi wisata. Kami juga mempunyai travel agent</h6>
+      <h6>di setiap destinasi wisata, sehingga anda tidak perlu repot repot mencari travel agent lagi.</h6>
+      <!-- text center -->
+    </div>
 
   <!-- container-fluid -->
 </div>
