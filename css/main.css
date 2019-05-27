@@ -10,6 +10,14 @@
     background-attachment: fixed;
 }
 
+.card {
+    height: 100%;
+}
+
+.card-img-top {
+    max-height: 150px;
+}
+
 .main-secondary-bg {
     background-color: #ea3788;
 }
@@ -19,12 +27,16 @@
 }
 
 .main-right-nav {
-    max-width: 150px;
+    max-width: 110px;
     top: 150px;
     right: 16px;
     position: fixed;
     z-index: 99;
     margin-left: auto;
+}
+
+.main-search {
+    width: 400px !important;
 }
 
 .main-right-content {
@@ -35,6 +47,13 @@
 
 .main-right-content img {
     height: 30px;
+}
+
+.main-display-img {
+    max-height: 150px;
+    width: 100%;
+    overflow: hidden;
+    width: auto;
 }
 
 @media (max-width:768px) {
