@@ -1,8 +1,20 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/header.php';
-require $_SERVER['DOCUMENT_ROOT'].'/navbar.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/navbar.php';
 ?>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form action="login-act.php" method="post">
+                <label for="uname">Username</label>
+                <input type="text" name="uname" id="uname" class="form-control">
+                <label for="passwd">Password</label>
+                <input type="password" name="passwd" id="passwd" class="form-control">
+            </form>
+        </div>
+    </div>
+</div>
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/footer.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/footer.php';
 ?>
