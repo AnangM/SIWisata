@@ -14,7 +14,7 @@
           <a class="nav-link" href="/destinasi.php">DESTINASI</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PERTUNJUKAN</a>
+          <a class="nav-link" href="/pertunjukan.php">PERTUNJUKAN</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">PAKET</a>
