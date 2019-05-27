@@ -17,12 +17,12 @@ if (!isset($_SESSION['admin'])) {
 }
 ?>
 <div class="container">
-    <form class="form" action="edit-destinasi-act.php" methon="post">
+    <form class="form" action="edit-destinasi-act.php" method="post">
         <input type="hidden" id="id" name="id" value="<?php echo $datas[0][id] ?>">
         <label for="name">Nama Destinasi</label>
         <input type="text" value="<?php echo $datas[0]['nama'] ;?>" class="form-control" name="name" id="name">
         <label for="desc">Deskripsi</label>
-        <textarea name="desc" value="<?php echo $datas[0]['deskripsi'] ;?>" class="form-control" id="desc"></textarea>
+        <textarea name="desc" class="form-control" id="desc"><?php echo $datas[0]['deskripsi'] ;?></textarea>
         <label for="lat">Latitude</label>
         <input type="text" value="<?php echo $datas[0]['lat'] ;?>" class="form-control" name="lat" id="lat">
         <label for="lon">Longitude</label>

@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+if(isset($_SESSION['admin'])){
+
 require('admin_header.php');
 require $_SERVER['DOCUMENT_ROOT'] . '/connect.php';
 
@@ -75,4 +79,7 @@ $result = $conn->query($sql);
 
 <?php
 require('admin_footer.php');
+}else{
+    header('Location:index.php');
+}
 ?>

@@ -1,6 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/header.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/navbar.php';
+require('admin_header.php');
 ?>
 <div class="container">
     <div class="row">
