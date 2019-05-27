@@ -1,67 +1,89 @@
 <?php require('header.php'); ?>
 <div class="full-height main-bg-image">
-  <!-- Navbar     -->
-  <nav class="navbar navbar-expand-md navbar-dark  main-bg">
+    <?php require('navbar.php'); ?>
 
-    <a class="navbar-brand" href="./">
-      <img height="30px" class="d-inline-block align-top" src="./images/icon/map.svg" alt="">
-      TravelKuy
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">DESTINASI<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">PERTUNJUKAN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">PAKET</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">EVENT</a>
-        </li>
-      </ul>
+  <!-- Side Nav -->
+  <div class="main-right-nav text-white">
+    <!-- Customer Service -->
+    <div class="row main-bg main-right-content">
+      <div class="col-sm-8">
+        Kontak Kami
+      </div>
+      <div class="col-sm-3">
+        <img src="./images/icon/cs.svg">
+      </div>
     </div>
-  </nav>
-  <div class="container-fluid">
-    <!-- Side Nav -->
-    <div class="main-right-nav text-white">
-      <!-- Customer Service -->
-      <div class="row main-bg main-right-content">
-        <div class="col-md-9">
-          Kontak Kami
-        </div>
-        <div class="col-md-3">
-          <img src="./images/icon/cs.svg">
-        </div>
+    <!-- Cara booking -->
+    <div class="row main-secondary-bg main-right-content">
+      <div class="col-sm-8">
+        Booking Trip
       </div>
-      <!-- Cara booking -->
-      <div class="row main-secondary-bg main-right-content">
-        <div class="col-md-9">
-          Booking Trip
-        </div>
-        <div class="col-md-3">
-          <img src="./images/icon/question.svg">
-        </div>
+      <div class="col-sm-3">
+        <img src="./images/icon/question.svg">
       </div>
-      <!-- paket trip -->
-      <div class="row main-tritary-bg main-right-content">
-        <div class="col-md-9">
-          Paket Trip
-        </div>
-        <div class="col-md-3">
-            <img src="./images/icon/gift.svg">
-          </div>
-        <!-- row -->
-      </div>
-      <!-- main right nav -->
     </div>
-    <!-- container-fluid -->
+    <!-- paket trip -->
+    <div class="row main-tritary-bg main-right-content">
+      <div class="col-sm-8">
+        Paket Trip
+      </div>
+      <div class="col-sm-3">
+        <img src="./images/icon/gift.svg">
+      </div>
+      <!-- row -->
+    </div>
+    <!-- main right nav -->
   </div>
-  <!-- full height -->
+
+  <div class="container">
+
+    <div class="text-center text-white">
+      <h2><i><b>Paling Sering Dikunjungi</b></i></h2>
+      <!-- text center -->
+    </div>
+    <div class="row text-white" style="padding-right:2em;padding-left:2em;">
+      <div class="col-md">
+        <div class="text-center ">
+
+          <p>Pulau Bunaken</p>
+          <img class="main-display-img" src="/images/bunaken.jpeg">
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="text-center">
+
+          <p>Raja Ampat</p>
+          <img class="main-display-img" src="/images/rajaampat.JPG">
+        </div>
+
+      </div>
+      <div class="col-md">
+        <div class="text-center">
+          <p>Gunung Bromo</p>
+          <img class="main-display-img" src="/images/bromo.jpg">
+        </div>
+
+      </div>
+      <!-- row -->
+    </div>
+    <div class="row" style="margin-top:3em;">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <form action="search.php" method="get">
+          <div class="input-group mb3">
+            <input type="text" class="form-control " name="q" id="q" placeholder="Cari Destinasi Wisata...">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary  main-bg" type="submit">Cari!</button>
+            </div>
+        </form>
+      </div>
+
+    </div>
+    <!-- row -->
+  </div>
+
+  <!-- container-fluid -->
+</div>
+<!-- full height -->
 </div>
 <?php require('footer.php'); ?>
