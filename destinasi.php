@@ -8,10 +8,22 @@
     ?>
     <div class="card-group">
         <?php
-        $temp = 0;
+        $temp = [];
+        
+        function linearSearch($arr,$key){
+            $found = FALSE;
+            for($i = 0; $i<sizeof($arr);$i++){
+                if($arr[$i]==$key){
+                    $found = TRUE;
+                    break;
+                }
+            }
+            return $found;
+        }
         while ($row = $result->fetch_assoc()) {
-            if ($row['id'] != $temp) {
-                $temp = $row['id'];
+            $found = linearSearch($temp,$row['id']);
+            if (!$found) {
+                $temp[] = $row['id'];
                 ?>
                 <div class="col-md-3" style="margin-bottom:1em;">
                     <div class="card">
