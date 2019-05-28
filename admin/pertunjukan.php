@@ -6,17 +6,17 @@ if (isset($_SESSION['admin'])) {
     require('admin_header.php');
     require $_SERVER['DOCUMENT_ROOT'] . '/connect.php';
 
-    $sql = "SELECT * FROM `wisata_lokasi`;";
+    $sql = "SELECT * FROM `wisata_pertunjukan`;";
     $result = $conn->query($sql);
     ?>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h4>Daftar Destinasi Wisata</h4>
+                <h4>Daftar Objek Pertunjukan</h4>
             </div>
             <div class="col-md-3">
-                <a href="add-destinasi.php">
-                    <button class="btn btn-primary">Tambah Destinasi</button>
+                <a href="add-pertunjukan.php">
+                    <button class="btn btn-primary">Tambah Objek</button>
                 </a>
             </div>
         </div>
@@ -32,12 +32,12 @@ if (isset($_SESSION['admin'])) {
                     ?>
                     <tr class="text-center">
                         <td><?php echo $row['nama']; ?></td>
-                        <td><?php echo $row['deskripsi']; ?></td>
+                        <td><?php echo $row['detail']; ?></td>
                         <td>
-                            <a href="edit-destinasi.php?id=<?php echo $row['id']; ?>">
+                            <a href="edit-pertunjukan.php?id=<?php echo $row['id']; ?>">
                                 <button class="btn btn-primary">Edit</button>
                             </a>
-                            <button class="btn btn-danger" onclick="delete_destination(<?php echo $row['id']; ?>,'<?php echo $row['nama']; ?>')">Hapus</button>
+                            <button class="btn btn-danger" onclick="delete_pertunjukan(<?php echo $row['id']; ?>,'<?php echo $row['nama']; ?>')">Hapus</button>
                             <a href="foto-destinasi.php?q=<?php echo $row['id']; ?>">
                                 <button class="btn btn-primary"><i class="fas fa-images"></i></button>
                             </a>
@@ -76,9 +76,9 @@ if (isset($_SESSION['admin'])) {
     </div>
 
     <script>
-        function delete_destination(id, name) {
+        function delete_pertunjukan(id, name) {
             $('#displayKeterangan').text("Apakah anda yakin menghapus " + name + "?");
-            $btn = "<form id='deleteForm' action='delete-destinasi.php' method='POST'><button type='submit' name='id' value='" + id + "' class='btn btn-danger'>Hapus</button></form>";
+            $btn = "<form id='deleteForm' action='delete-pertunjukan.php' method='POST'><button type='submit' name='id' value='" + id + "' class='btn btn-danger'>Hapus</button></form>";
             if ($('#deleteForm').length) {
                 $('#deleteForm').remove();
                 $('#deleteOption').append($btn);

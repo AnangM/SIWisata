@@ -33,7 +33,7 @@
       <a class="nav-link" href="/admin/destinasi.php">DESTINASI</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/pertunjukan.php">PERTUNJUKAN</a>
+      <a class="nav-link" href="/admin/pertunjukan.php">PERTUNJUKAN</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">PAKET</a>
