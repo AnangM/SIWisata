@@ -17,7 +17,7 @@
                     <div class="card">
                         <img class="card-img-top" src="<?php echo $row['url']; ?>">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['nama']; ?></h5>
+                            <h5 class="card-title"><a href="/detail.php?q=<?php echo $row['id'] ;?>"><?php echo $row['nama']; ?></a></h5>
                         </div>
                     </div>
                 </div>
