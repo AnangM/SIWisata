@@ -37,7 +37,7 @@
 
   <div class="container">
 
-    <div class="text-center text-white">
+   <div class="text-center text-white">
       <h2><i><b>Paling Sering Dikunjungi</b></i></h2>
       <!-- text center -->
     </div>
@@ -66,7 +66,7 @@
       </div>
       <!-- row -->
     </div>
-    <div class="row" style="margin-top:4.8em;">
+    <div class="row" style="margin-top:5.8em;">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <form action="search.php" method="get">

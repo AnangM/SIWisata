@@ -13,5 +13,5 @@ require('admin_header.php');
 </div>
 <?php
 }
-require('admin-footer.php');
+require('admin_footer.php');
 ?>

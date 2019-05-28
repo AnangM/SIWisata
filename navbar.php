@@ -22,6 +22,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">EVENT</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tentang.php">TENTANG</a>
+        </li>
       </ul>
     </div>
   </nav>

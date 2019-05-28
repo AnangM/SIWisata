@@ -21,6 +21,21 @@ html,
     background-attachment: fixed;
 }
 
+.destination-bg-image {
+    background: url(/images/darktemple.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+.comment{
+    display: block;
+    padding: 1em;
+    border: 1px grey;
+}
+
+.comment-body{
+    padding-left: 2em;
+}
+
 .card {
     height: 100%;
 }
@@ -62,6 +77,13 @@ html,
 
 .main-display-img {
     max-height: 150px;
+    width: 100%;
+    overflow: hidden;
+    width: auto;
+}
+
+.main-about-img{
+    max-height: 300px;
     width: 100%;
     overflow: hidden;
     width: auto;
