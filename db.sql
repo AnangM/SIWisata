@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 28, 2019 at 10:49 AM
+-- Generation Time: May 28, 2019 at 07:25 PM
 -- Server version: 5.7.26-0ubuntu0.19.04.1
 -- PHP Version: 7.2.17-0ubuntu0.19.04.1
 
@@ -52,19 +52,21 @@ INSERT INTO `wisatai_admin` (`id`, `username`, `passwd`, `nama`, `email`) VALUES
 CREATE TABLE `wisata_foto` (
   `id` int(7) NOT NULL,
   `id_lokasi` int(7) DEFAULT NULL,
-  `url` text NOT NULL
+  `url` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_foto`
 --
 
-INSERT INTO `wisata_foto` (`id`, `id_lokasi`, `url`) VALUES
-(1, NULL, 'https://www.google.com/maps/place/Kec.+Kraton,+Kota+Yogyakarta,+Daerah+Istimewa+Yogyakarta/@-7.8090256,110.363649,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPnn720xLzTrn6oQWfeAaeDlqfI9i9oYpIt-zrj!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPnn720xLzTrn6oQWfeAaeDlqfI9i9oYpIt-zrj%3Dw196-h120-k-no!7i4471!8i2730!4m5!3m4!1s0x2e7a5791a5339209:0x4027a76e35300d0!8m2!3d-7.8090256!4d110.363649#'),
-(2, NULL, 'https://i2.wp.com/www.maioloo.com/maioloo/wp-content/uploads/2016/06/Keraton-Yogyakarta.jpg?fit=1200%2C800&ssl=1'),
-(3, NULL, 'https://upload.wikimedia.org/wikipedia/id/6/6e/Pendopo_Magangan_Keraton_Surakarta.jpg'),
-(4, 3, 'https://asset.kompas.com/crop/100x108:900x642/750x500/data/photo/2017/06/28/230214839.jpg'),
-(5, 2, 'https://www.nativeindonesia.com/wp-content/uploads/2017/08/wisata-candi-borobudur.jpg');
+INSERT INTO `wisata_foto` (`id`, `id_lokasi`, `url`, `timestamp`) VALUES
+(1, NULL, 'https://www.google.com/maps/place/Kec.+Kraton,+Kota+Yogyakarta,+Daerah+Istimewa+Yogyakarta/@-7.8090256,110.363649,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPnn720xLzTrn6oQWfeAaeDlqfI9i9oYpIt-zrj!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPnn720xLzTrn6oQWfeAaeDlqfI9i9oYpIt-zrj%3Dw196-h120-k-no!7i4471!8i2730!4m5!3m4!1s0x2e7a5791a5339209:0x4027a76e35300d0!8m2!3d-7.8090256!4d110.363649#', '2019-05-28 12:18:49'),
+(2, NULL, 'https://i2.wp.com/www.maioloo.com/maioloo/wp-content/uploads/2016/06/Keraton-Yogyakarta.jpg?fit=1200%2C800&ssl=1', '2019-05-28 12:18:49'),
+(3, NULL, 'https://upload.wikimedia.org/wikipedia/id/6/6e/Pendopo_Magangan_Keraton_Surakarta.jpg', '2019-05-28 12:18:49'),
+(4, 3, 'https://asset.kompas.com/crop/100x108:900x642/750x500/data/photo/2017/06/28/230214839.jpg', '2019-05-28 12:18:49'),
+(5, 2, 'https://www.nativeindonesia.com/wp-content/uploads/2017/08/wisata-candi-borobudur.jpg', '2019-05-28 12:18:49'),
+(6, 4, 'https://cms.ahoy.nl/files/www.ahoy.nl/files/images/website/2018/headers/informatie_1920x1080.jpg', '2019-05-28 12:18:49');
 
 -- --------------------------------------------------------
 
@@ -75,15 +77,16 @@ INSERT INTO `wisata_foto` (`id`, `id_lokasi`, `url`) VALUES
 CREATE TABLE `wisata_foto_pertunjukan` (
   `id` int(11) NOT NULL,
   `url` text NOT NULL,
-  `id_pertunjukan` int(7) NOT NULL
+  `id_pertunjukan` int(7) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_foto_pertunjukan`
 --
 
-INSERT INTO `wisata_foto_pertunjukan` (`id`, `url`, `id_pertunjukan`) VALUES
-(1, 'http://www.borobudursunrise.net/images/upload/image/Ramayana%20Ballet%20Baru2.png', 1);
+INSERT INTO `wisata_foto_pertunjukan` (`id`, `url`, `id_pertunjukan`, `timestamp`) VALUES
+(1, 'http://www.borobudursunrise.net/images/upload/image/Ramayana%20Ballet%20Baru2.png', 1, '2019-05-28 12:19:13');
 
 -- --------------------------------------------------------
 
@@ -97,16 +100,18 @@ CREATE TABLE `wisata_lokasi` (
   `deskripsi` text NOT NULL,
   `lat` text NOT NULL,
   `lon` text NOT NULL,
-  `htm` bigint(20) NOT NULL
+  `htm` bigint(20) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_lokasi`
 --
 
-INSERT INTO `wisata_lokasi` (`id`, `nama`, `deskripsi`, `lat`, `lon`, `htm`) VALUES
-(2, 'Candi Borobudurr', 'Candi Budha Terbesar Di Duniahfkyf', '-7.6078738', '110.2015626', 50000),
-(3, 'Candi Prambanann', 'Candi Prambanan', '-7.7520206', '110.4892787', 50000);
+INSERT INTO `wisata_lokasi` (`id`, `nama`, `deskripsi`, `lat`, `lon`, `htm`, `timestamp`) VALUES
+(2, 'Candi Borobudurr', 'Candi Budha Terbesar Di Duniah\r\n', '-7.6078738', '110.2015626', 50000, '2019-05-28 12:19:32'),
+(3, 'Candi Prambanann', 'Candi Prambanan', '-7.7520206', '110.4892787', 50000, '2019-05-28 12:19:32'),
+(4, 'asd', 'asdasdasd', '7.123344', '-110.122122', 10000, '2019-05-28 12:19:32');
 
 -- --------------------------------------------------------
 
@@ -116,15 +121,16 @@ INSERT INTO `wisata_lokasi` (`id`, `nama`, `deskripsi`, `lat`, `lon`, `htm`) VAL
 
 CREATE TABLE `wisata_moda` (
   `id` int(7) NOT NULL,
-  `moda` text NOT NULL
+  `moda` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_moda`
 --
 
-INSERT INTO `wisata_moda` (`id`, `moda`) VALUES
-(1, 'Bus');
+INSERT INTO `wisata_moda` (`id`, `moda`, `timestamp`) VALUES
+(1, 'Bus', '2019-05-28 12:19:50');
 
 -- --------------------------------------------------------
 
@@ -137,15 +143,16 @@ CREATE TABLE `wisata_pertunjukan` (
   `nama` text NOT NULL,
   `detail` text NOT NULL,
   `lat` varchar(50) NOT NULL,
-  `lon` varchar(50) NOT NULL
+  `lon` varchar(50) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_pertunjukan`
 --
 
-INSERT INTO `wisata_pertunjukan` (`id`, `nama`, `detail`, `lat`, `lon`) VALUES
-(1, 'Ramayana Balet', 'Ramayana Balet with REAL FIREEEEE', '-7.7520206 ', '110.4892787');
+INSERT INTO `wisata_pertunjukan` (`id`, `nama`, `detail`, `lat`, `lon`, `timestamp`) VALUES
+(1, 'Ramayana Balet', 'Ramayana Balet with REAL FIREEEEE', '-7.7520206 ', '110.4892787', '2019-05-28 12:20:08');
 
 -- --------------------------------------------------------
 
@@ -156,16 +163,20 @@ INSERT INTO `wisata_pertunjukan` (`id`, `nama`, `detail`, `lat`, `lon`) VALUES
 CREATE TABLE `wisata_review` (
   `id` int(7) NOT NULL,
   `id_lokasi` int(7) DEFAULT NULL,
+  `uname` text NOT NULL,
+  `email` text NOT NULL,
   `review` text NOT NULL,
-  `rating` double NOT NULL
+  `rating` double NOT NULL,
+  `timetamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_review`
 --
 
-INSERT INTO `wisata_review` (`id`, `id_lokasi`, `review`, `rating`) VALUES
-(1, NULL, 'Luar Byasahhhhhh', 4);
+INSERT INTO `wisata_review` (`id`, `id_lokasi`, `uname`, `email`, `review`, `rating`, `timetamp`) VALUES
+(1, NULL, '', '', 'Luar Byasahhhhhh', 4, '2019-05-28 12:18:16'),
+(2, 3, 'anonim', 'anonim@mail.com', 'Oh yeahhhhhh', 5, '2019-05-28 12:25:00');
 
 -- --------------------------------------------------------
 
@@ -176,17 +187,19 @@ INSERT INTO `wisata_review` (`id`, `id_lokasi`, `review`, `rating`) VALUES
 CREATE TABLE `wisata_review_pertunjukan` (
   `id` int(7) NOT NULL,
   `nama` varchar(255) NOT NULL,
+  `email` text NOT NULL,
   `comment` text NOT NULL,
   `rating` double NOT NULL,
-  `id_pertunjukan` int(7) NOT NULL
+  `id_pertunjukan` int(7) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_review_pertunjukan`
 --
 
-INSERT INTO `wisata_review_pertunjukan` (`id`, `nama`, `comment`, `rating`, `id_pertunjukan`) VALUES
-(1, 'anonim', 'Kyaaaaa sugoiiiii', 4, 1);
+INSERT INTO `wisata_review_pertunjukan` (`id`, `nama`, `email`, `comment`, `rating`, `id_pertunjukan`, `timestamp`) VALUES
+(1, 'anonim', '', 'Kyaaaaa sugoiiiii', 4, 1, '2019-05-28 12:21:03');
 
 -- --------------------------------------------------------
 
@@ -197,15 +210,16 @@ INSERT INTO `wisata_review_pertunjukan` (`id`, `nama`, `comment`, `rating`, `id_
 CREATE TABLE `wisata_transportasi` (
   `id` int(7) NOT NULL,
   `id_moda` int(7) DEFAULT NULL,
-  `id_lokasi` int(7) DEFAULT NULL
+  `id_lokasi` int(7) DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `wisata_transportasi`
 --
 
-INSERT INTO `wisata_transportasi` (`id`, `id_moda`, `id_lokasi`) VALUES
-(1, 1, NULL);
+INSERT INTO `wisata_transportasi` (`id`, `id_moda`, `id_lokasi`, `timestamp`) VALUES
+(1, 1, NULL, '2019-05-28 12:21:22');
 
 --
 -- Indexes for dumped tables
@@ -284,7 +298,7 @@ ALTER TABLE `wisatai_admin`
 -- AUTO_INCREMENT for table `wisata_foto`
 --
 ALTER TABLE `wisata_foto`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `wisata_foto_pertunjukan`
 --
@@ -294,7 +308,7 @@ ALTER TABLE `wisata_foto_pertunjukan`
 -- AUTO_INCREMENT for table `wisata_lokasi`
 --
 ALTER TABLE `wisata_lokasi`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `wisata_moda`
 --
@@ -309,7 +323,7 @@ ALTER TABLE `wisata_pertunjukan`
 -- AUTO_INCREMENT for table `wisata_review`
 --
 ALTER TABLE `wisata_review`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `wisata_review_pertunjukan`
 --

@@ -1,5 +1,8 @@
 <?php
-require('admin_header.php'); ?>
+session_start();
+if(isset($_SESSION['admin'])){
+
+    require('admin_header.php'); ?>
 
 <div class="container">
     <div class="row">
@@ -17,7 +20,7 @@ require('admin_header.php'); ?>
                 <label for="htm">Harga Tiket</label>
                 <input type="text" class="form-control" name="htm" id="htm">
                 <div class="text-right" style="margin-top:1em;">
-                    <button class="btn main-bg text-white" type="submit">Tambah</button>
+                        <button class="btn main-bg text-white" type="submit">Tambah</button>
                 </div>
             </form>
         </div>
@@ -27,4 +30,7 @@ require('admin_header.php'); ?>
 
 <?php
 require('admin_footer.php');
+}else{
+    header('Location:index.php');
+}
 ?>
