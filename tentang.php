@@ -1,6 +1,5 @@
 <?php require('header.php');?>
-
-<div class="main-bg-image">
+<div class="destination-bg-image">
 <?php require('navbar.php');?>
 <div class="container">
   
