@@ -26,12 +26,7 @@
         }
     }
     ?>
-<<<<<<< HEAD
-
-</div>
-=======
     </div>
->>>>>>> ccb70c0f4f3066bd7a59aac0c1b40fcbe8e49215
 
 </div>
 </div>

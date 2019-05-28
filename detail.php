@@ -45,21 +45,21 @@ $conn->close();
     }
     ?>
     </div>
-    <div class="row">
         <?php
         while ($row = $comment->fetch_assoc()) {
             ?>
+            <div class="row">
             <div class="comment">
-                <div class="comment-uname"><?php echo $row['uname'] ;?></div>
-                <div class="comment-uname small"><?php echo $row['timestamp'] ;?></div>
+                <div class="comment-uname"><b><?php echo $row['uname'] ;?></b></div>
+                <div class="comment-uname small text-muted"><?php echo $row['timestamp'] ;?></div>
                 <div class="comment-body">
                     <div class="comment-uname"><?php echo $row['review'] ;?></div>
+                </div>
                 </div>
             </div>
         <?php
     }
     ?>
-    </div>
 </div>
 <?php
 require('footer.php');

@@ -37,7 +37,7 @@
 
   <div class="container">
 
-    <div class="text-center text-white">
+   <div class="text-center text-white">
       <h2><i><b>Paling Sering Dikunjungi</b></i></h2>
       <!-- text center -->
     </div>
