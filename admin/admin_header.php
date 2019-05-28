@@ -41,7 +41,7 @@
         <a class="nav-link" href="#">EVENT</a>
     </li>
     <?php 
-    session_start();
+
     if(isset($_SESSION['admin'])){?>
     <li class="nav-item">
         <a class="nav-link" href="logout.php">LOGOUT!</a>
