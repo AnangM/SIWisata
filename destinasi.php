@@ -1,7 +1,8 @@
 <?php require('header.php') ?>
+<div class="main-full-height destination-bg-image">
 <?php require('navbar.php') ?>
-<div class="container">
-    <?php require('connect.php');
+    <div class="container">
+        <?php require('connect.php');
     $sql = "SELECT wisata_lokasi.id,wisata_lokasi.nama,wisata_foto.url FROM wisata_lokasi INNER JOIN wisata_foto ON wisata_lokasi.id= wisata_foto.id_lokasi ";
     $result = $conn->query($sql);
     $conn->close();
@@ -21,12 +22,13 @@
                         </div>
                     </div>
                 </div>
-            <?php
+                <?php
         }
     }
     ?>
 
-    </div>
+</div>
 
+</div>
 </div>
 <?php require('footer.php') ?>

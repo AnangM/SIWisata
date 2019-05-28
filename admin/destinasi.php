@@ -1,23 +1,24 @@
+
 <?php
 
 session_start();
 if (isset($_SESSION['admin'])) {
-
+    
     require('admin_header.php');
     require $_SERVER['DOCUMENT_ROOT'] . '/connect.php';
-
+    
     $sql = "SELECT * FROM `wisata_lokasi`;";
     $result = $conn->query($sql);
     ?>
+    <div class="main-full-height main-bg-image">
+</div>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <h4>Daftar Destinasi Wisata</h4>
             </div>
             <div class="col-md-3">
-                <a href="add-destinasi.php">
                 <button class="btn btn-primary">Tambah Destinasi</button>
-                </a>
             </div>
         </div>
         <table class="table" style="margin-top:2em;">
@@ -86,6 +87,7 @@ if (isset($_SESSION['admin'])) {
             $('#modalDelete').modal('show');
         }
     </script>
+    </div>
 
     <?php
     require('admin_footer.php');
