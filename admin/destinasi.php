@@ -15,7 +15,9 @@ if (isset($_SESSION['admin'])) {
                 <h4>Daftar Destinasi Wisata</h4>
             </div>
             <div class="col-md-3">
+                <a href="add-destinasi.php">
                 <button class="btn btn-primary">Tambah Destinasi</button>
+                </a>
             </div>
         </div>
         <table class="table" style="margin-top:2em;">
