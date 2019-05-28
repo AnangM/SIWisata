@@ -23,9 +23,9 @@ if (!isset($_SESSION['admin'])) {
             </div>
             <div class="col-md-2">
                 <form action="add-foto-destinasi.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $data[0]['id'] ;?>">
-                <button type="submit" class="btn text-white main-bg">Tambahkan Foto</button>
-            </form>
+                    <input type="hidden" name="id" value="<?php echo $data[0]['id']; ?>">
+                    <button type="submit" class="btn text-white main-bg">Tambahkan Foto</button>
+                </form>
             </div>
         </div>
         <div class="card-group">
@@ -38,8 +38,8 @@ if (!isset($_SESSION['admin'])) {
                         <div class="card-body">
                             <p class="small"><?php echo $row['timestamp']; ?></p>
                             <div class="text-right">
-                                <a  href="/admin/edit-foto.php?q=<?php echo $row['id'] ;?>">edit</a>&nbsp;&nbsp;&nbsp;
-                                <a class="text-danger" href="#">delete</a>
+                                <a href="/admin/edit-foto.php?q=<?php echo $row['id']; ?>">edit</a>&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-danger"  onclick="delete_photo(<?php echo $row['id']; ?>,<?php echo $id; ?>,'<?php echo $row['timestamp']; ?>')">delete</button>
                             </div>
                         </div>
                     </div>
@@ -49,6 +49,51 @@ if (!isset($_SESSION['admin'])) {
         ?>
         </div>
     </div>
+
+    <!-- MODAL -->
+    <div id="modalDelete" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Hapus Data</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p id="displayKeterangan"></p>
+                </div>
+
+                <!-- Modal footer -->
+                <div id="deleteOption" class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function delete_photo(id,idLokasi, name) {
+            $('#displayKeterangan').text("Apakah anda yakin menghapus " + name + "?");
+            $btn = `<form id='deleteForm' action='delete-foto-destinasi.php' method='POST'>
+            <input type="hidden" id="id" name="id" value="`+ id +`">
+            <input type="hidden" id="idLokasi" name="idLokasi" value="`+ idLokasi +`">
+            <button type='submit'class='btn btn-danger'>Hapus</button></form>`;
+            if ($('#deleteForm').length) {
+                $('#deleteForm').remove();
+                $('#deleteOption').append($btn);
+            } else {
+                $('#deleteOption').append($btn);
+            }
+            $('#modalDelete').modal('show');
+        }
+    </script>
+
     <?php
     require('admin_footer.php');
 }
