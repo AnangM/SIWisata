@@ -1,5 +1,5 @@
 <?php require('header.php'); ?>
-<div class="full-height main-bg-image">
+<div class="main-full-height main-bg-image">
     <?php require('navbar.php'); ?>
 
   <!-- Side Nav -->
