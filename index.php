@@ -66,7 +66,7 @@
       </div>
       <!-- row -->
     </div>
-    <div class="row" style="margin-top:4.8em;">
+    <div class="row" style="margin-top:5.8em;">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <form action="search.php" method="get">
