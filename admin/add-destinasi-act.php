@@ -1,8 +1,11 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/connect.php';
-$name = $_POST['name'];
-$desc = $_POST['desc'];
-$lat = $_POST['lat'];
+session_start();
+if(isset($_SESSION['admin'])){
+
+    require $_SERVER['DOCUMENT_ROOT'].'/connect.php';
+    $name = $_POST['name'];
+    $desc = $_POST['desc'];
+    $lat = $_POST['lat'];
 $lon = $_POST['lon'];
 $htm = $_POST['htm'];
 
@@ -13,6 +16,9 @@ if($conn->query($sql)===TRUE){
     exit();
 }else{
     echo "ERROR : " . $conn->error();
+}
+}else{
+    header('Location:index.php');
 }
 
 ?>
