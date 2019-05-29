@@ -7,9 +7,10 @@ if(!isset($_SESSION['admin'])){
     $id = $_POST['id'];
     $name = $_POST['name'];
     $desc = $_POST['desc'];
+    $full = $_POST['full'];
 
 
-    $sql = "UPDATE `wisata_pertunjukan` SET `nama` = '$name', `detail` = '$desc' WHERE `wisata_pertunjukan`.`id` = $id";
+    $sql = "UPDATE `wisata_pertunjukan` SET `nama` = '$name', `detail` = '$desc',`full`='$full' WHERE `wisata_pertunjukan`.`id` = $id";
 
     if($conn->query($sql) === TRUE){
         header('Location:/admin/pertunjukan.php');

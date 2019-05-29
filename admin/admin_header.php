@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <title>TravelKuy</title>
+    <script src='https://cloud.tinymce.com/5/tinymce.min.js?apiKey=exb4q705p8sakyh9gm807eowelksxjt4u8szzv6paxe039km'></script>
+  <script>
+  tinymce.init({
+    selector: '#full'
+  });
+  </script>
 </head>
 <!-- Until This Line  IS A MUST -->
 

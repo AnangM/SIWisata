@@ -30,7 +30,7 @@ $conn->close();
                 <div class="card">
                     <img class="card-img-top" src="<?php echo $row['url']; ?>">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $row['nama'] ;?></h5>
+                       <a href="detail-pertunjukan.php?q=<?php echo $row['id'] ;?>"> <h5 class="card-title"><?php echo $row['nama'] ;?></h5></a>
                         <p><?php echo $row['detail'] ;?></p>
                     </div>
                 </div>

@@ -17,10 +17,13 @@
           <a class="nav-link" href="/pertunjukan.php">PERTUNJUKAN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PAKET</a>
+          <a class="nav-link" href="/paket.php">PAKET</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">EVENT</a>
+          <a class="nav-link" href="/event.php">EVENT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.php">HUBUNGI KAMI</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/tentang.php">TENTANG</a>

@@ -38,7 +38,7 @@ if (isset($_SESSION['admin'])) {
                                 <button class="btn btn-primary">Edit</button>
                             </a>
                             <button class="btn btn-danger" onclick="delete_pertunjukan(<?php echo $row['id']; ?>,'<?php echo $row['nama']; ?>')">Hapus</button>
-                            <a href="foto-destinasi.php?q=<?php echo $row['id']; ?>">
+                            <a href="foto-pertunjukan.php?q=<?php echo $row['id']; ?>">
                                 <button class="btn btn-primary"><i class="fas fa-images"></i></button>
                             </a>
                         </td>

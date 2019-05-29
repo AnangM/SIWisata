@@ -5,11 +5,12 @@ if(isset($_SESSION['admin'])){
     require $_SERVER['DOCUMENT_ROOT'].'/connect.php';
     $name = $_POST['name'];
     $desc = $_POST['desc'];
+    $full = $_POST['full'];
     $lat = $_POST['lat'];
 $lon = $_POST['lon'];
 $htm = $_POST['htm'];
 
-$sql = "INSERT INTO `wisata_lokasi` (`id`, `nama`, `deskripsi`, `lat`, `lon`, `htm`) VALUES (NULL, '$name', '$desc', '$lat', '$lon', '$htm')";
+$sql = "INSERT INTO `wisata_lokasi` (`id`, `nama`, `deskripsi`,`full`, `lat`, `lon`, `htm`) VALUES (NULL, '$name', '$desc','$full', '$lat', '$lon', '$htm')";
 
 if($conn->query($sql)===TRUE){
     header('Location:destinasi.php');

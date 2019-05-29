@@ -23,6 +23,8 @@ if (!isset($_SESSION['admin'])) {
         <input type="text" value="<?php echo $datas[0]['nama'] ;?>" class="form-control" name="name" id="name">
         <label for="desc">Deskripsi</label>
         <textarea name="desc" class="form-control" id="desc"><?php echo $datas[0]['detail'] ;?></textarea>
+        <label for="full">Detail</label>
+        <textarea rows="20" name="full" class="form-control" id="full"><?php echo $datas[0]['full'] ;?></textarea>
         <div class="text-right">
             <button type="submit" class="btn main-bg text-white" style="margin-top:1em;">Update!</button>
         </div>

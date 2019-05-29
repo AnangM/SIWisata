@@ -3,37 +3,6 @@
     <?php require('navbar.php'); ?>
 
   <!-- Side Nav -->
-  <div class="main-right-nav text-white">
-    <!-- Customer Service -->
-    <div class="row main-bg main-right-content">
-      <div class="col-sm-8">
-        Kontak Kami
-      </div>
-      <div class="col-sm-3">
-        <img src="./images/icon/cs.svg">
-      </div>
-    </div>
-    <!-- Cara booking -->
-    <div class="row main-secondary-bg main-right-content">
-      <div class="col-sm-8">
-        Booking Trip
-      </div>
-      <div class="col-sm-3">
-        <img src="./images/icon/question.svg">
-      </div>
-    </div>
-    <!-- paket trip -->
-    <div class="row main-tritary-bg main-right-content">
-      <div class="col-sm-8">
-        Paket Trip
-      </div>
-      <div class="col-sm-3">
-        <img src="./images/icon/gift.svg">
-      </div>
-      <!-- row -->
-    </div>
-    <!-- main right nav -->
-  </div>
 
   <div class="container">
 
